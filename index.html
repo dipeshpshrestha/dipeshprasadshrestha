@@ -1,0 +1,808 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dipesh Prasad Shrestha | Portfolio & Resume</title>
+    <meta name="description" content="Portfolio of Dipesh Prasad Shrestha: B.Tech Ed. IT Student, Aspiring Software Developer, Data & AI Enthusiast.">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@500;600;700&display=swap" rel="stylesheet">
+
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        heading: ['Poppins', 'sans-serif'],
+                    },
+                    colors: {
+                        primary: '#3b82f6', // blue-500
+                        secondary: '#8b5cf6', // violet-500
+                        dark: '#0f172a', // slate-900
+                        card: 'rgba(30, 41, 59, 0.7)', // slate-800 with opacity
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        body { background-color: #0f172a; color: #f8fafc; }
+        .glass-card {
+            background: rgba(30, 41, 59, 0.6);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .text-gradient {
+            background: linear-gradient(to right, #3b82f6, #8b5cf6);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        
+        /* Print Styles for ATS Resume */
+        @media print {
+            body * { visibility: hidden; }
+            #resume-section, #resume-section * { visibility: visible; }
+            #resume-section { 
+                position: absolute; 
+                left: 0; 
+                top: 0; 
+                width: 100%;
+                background: white !important;
+                color: black !important;
+            }
+            .glass-card { background: none !important; border: none !important; backdrop-filter: none !important; box-shadow: none !important; }
+            .no-print { display: none !important; }
+            .print-text-black { color: black !important; }
+            .print-border-gray { border-color: #ccc !important; }
+        }
+    </style>
+</head>
+<body class="antialiased overflow-x-hidden selection:bg-primary selection:text-white">
+    <a class="sr-only focus:not-sr-only" href="#main">Skip to content</a>
+
+    <nav class="fixed w-full z-50 glass-card border-b-0 transition-all duration-300" id="navbar" role="navigation" aria-label="Primary navigation">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <div class="flex-shrink-0 font-heading text-xl font-bold tracking-wider">
+
+<span class="text-primary"></span>
+                </div>
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-6 text-sm font-medium text-gray-300">
+                        <a href="#home" class="hover:text-white transition-colors">Home</a>
+                        <a href="#about" class="hover:text-white transition-colors">About</a>
+                        <a href="#journey" class="hover:text-white transition-colors">Journey</a>
+                        <a href="#skills" class="hover:text-white transition-colors">Skills</a>
+                        <a href="#certifications" class="hover:text-white transition-colors">Certifications</a>
+                        <a href="#projects" class="hover:text-white transition-colors">Projects</a>
+                        <a href="#resume" class="hover:text-white text-primary transition-colors">Resume</a>
+                    </div>
+                </div>
+                <div class="md:hidden">
+                    <button id="mobile-menu-btn" class="text-gray-300 hover:text-white focus:outline-none p-2" aria-controls="mobile-menu" aria-expanded="false" aria-label="Open menu">
+                        <i class="fas fa-bars text-2xl" aria-hidden="true"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden glass-card border-t border-white/10" aria-hidden="true" role="menu">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3 text-center">
+                <a href="#home" class="block px-3 py-2 text-base font-medium text-gray-300 hover:text-white" role="menuitem">Home</a>
+                <a href="#about" class="block px-3 py-2 text-base font-medium text-gray-300 hover:text-white" role="menuitem">About</a>
+                <a href="#journey" class="block px-3 py-2 text-base font-medium text-gray-300 hover:text-white" role="menuitem">Journey</a>
+                <a href="#skills" class="block px-3 py-2 text-base font-medium text-gray-300 hover:text-white" role="menuitem">Skills</a>
+                <a href="#resume" class="block px-3 py-2 text-base font-medium text-primary hover:text-white" role="menuitem">Resume</a>
+            </div>
+        </div>
+    </nav>
+
+    <main id="main" role="main">
+
+    <section id="home" class="min-h-screen flex items-center justify-center pt-20 relative overflow-hidden">
+        <div class="absolute top-1/4 left-1/4 w-96 h-96 bg-primary/20 rounded-full mix-blend-screen filter blur-3xl opacity-50 animate-blob"></div>
+        <div class="absolute top-1/3 right-1/4 w-96 h-96 bg-secondary/20 rounded-full mix-blend-screen filter blur-3xl opacity-50 animate-blob animation-delay-2000"></div>
+        
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
+            <div class="flex flex-col md:flex-row items-center gap-12">
+                <div class="flex-1 text-center md:text-left" data-aos="fade-right">
+                    <h2 class="text-xl md:text-2xl font-medium text-gray-400 mb-2">Hi, I'm <span class="text-white font-semibold">Dipesh Prasad Shrestha</span></h2>
+                    <h1 class="text-4xl md:text-6xl font-heading font-bold leading-tight mb-6">
+                        Building My Future at the Intersection of <br>
+                        <span class="text-gradient">Technology, Data, AI & Creativity.</span>
+                    </h1>
+                    <p class="text-lg text-gray-400 mb-8 max-w-2xl mx-auto md:mx-0">
+                        An aspiring IT professional developing skills in software development, data analytics, artificial intelligence, web technologies, digital business, and creative technology.
+                    </p>
+                    <div class="flex flex-wrap gap-4 justify-center md:justify-start">
+                        <a href="#journey" class="px-6 py-3 rounded-lg bg-gradient-to-r from-primary to-secondary text-white font-medium hover:shadow-lg hover:shadow-primary/30 transition-all hover:-translate-y-1">Explore My Journey</a>
+                        <a href="#resume" class="px-6 py-3 rounded-lg glass-card text-white font-medium hover:bg-white/10 transition-all hover:-translate-y-1">View Resume</a>
+                    </div>
+                    <div class="mt-8 flex gap-4 justify-center md:justify-start">
+                        <a href="https://www.linkedin.com/in/dipeshprasadshrestha" target="_blank" rel="noopener noreferrer" class="w-10 h-10 rounded-full glass-card flex items-center justify-center hover:bg-primary/20 transition-colors text-gray-300 hover:text-white"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="https://github.com/dipeshpshrestha" target="_blank" rel="noopener noreferrer" class="w-10 h-10 rounded-full glass-card flex items-center justify-center hover:bg-primary/20 transition-colors text-gray-300 hover:text-white"><i class="fab fa-github"></i></a>
+                        <a href="https://instagram.com/dipeshpshrestha" target="_blank" rel="noopener noreferrer" class="w-10 h-10 rounded-full glass-card flex items-center justify-center hover:bg-primary/20 transition-colors text-gray-300 hover:text-white"><i class="fab fa-instagram"></i></a>
+                        <a href="mailto:dipeshprasadshrestha@gmail.com" class="w-10 h-10 rounded-full glass-card flex items-center justify-center hover:bg-primary/20 transition-colors text-gray-300 hover:text-white"><i class="fas fa-envelope"></i></a>
+                    </div>
+                </div>
+                
+                <div class="flex-1 flex justify-center md:justify-end" data-aos="fade-left">
+                    <div class="relative w-64 h-64 md:w-80 md:h-80 rounded-2xl overflow-hidden glass-card p-2 group">
+                        <img src="pict.jpeg" alt="Dipesh Prasad Shrestha" class="w-full h-full object-cover rounded-xl">
+                    </img>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="py-20 bg-slate-900/50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-3xl font-heading font-bold text-white mb-4">About Me <span class="text-primary">&</span> My Story</h2>
+                <div class="w-20 h-1 bg-gradient-to-r from-primary to-secondary mx-auto rounded-full"></div>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div class="space-y-6 text-gray-300 text-lg leading-relaxed" data-aos="fade-right">
+                    <p>
+                        I believe the strongest technology professionals understand not only how to build technology, but also how to analyze information, communicate ideas, understand users, and create useful solutions.
+                    </p>
+                    <p>
+                        My journey began with a strong academic foundation in Management, Mathematics, and Computer Science. As I transition into a <strong>B.Tech Ed. IT</strong> student, I am intentionally building a multidisciplinary professional identity. I don't want to restrict myself to a single narrow field.
+                    </p>
+                    <p>
+                        I am deeply interested in programming and web development to build solutions, data analytics to understand information, and Artificial Intelligence to leverage the future of productivity. Alongside my technical pursuits, I value business awareness, digital marketing, and the creative arts—particularly my journey with the electric guitar.
+                    </p>
+                    <p>
+                        My long-term ambition is to become a highly versatile technology professional, developing practical skills to eventually work professionally and freelance in the tech industry.
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-2 gap-4" data-aos="fade-left">
+                    <div class="glass-card p-6 rounded-xl text-center hover:-translate-y-2 transition-transform duration-300">
+                        <i class="fas fa-laptop-code text-3xl text-primary mb-3"></i>
+                        <h3 class="font-semibold text-white">B.Tech Ed. IT</h3>
+                        <p class="text-sm text-gray-400 mt-1">Academic Focus</p>
+                    </div>
+                    <div class="glass-card p-6 rounded-xl text-center hover:-translate-y-2 transition-transform duration-300">
+                        <i class="fas fa-chart-pie text-3xl text-secondary mb-3"></i>
+                        <h3 class="font-semibold text-white">Data & Analytics</h3>
+                        <p class="text-sm text-gray-400 mt-1">Analytical Thinking</p>
+                    </div>
+                    <div class="glass-card p-6 rounded-xl text-center hover:-translate-y-2 transition-transform duration-300">
+                        <i class="fas fa-brain text-3xl text-primary mb-3"></i>
+                        <h3 class="font-semibold text-white">Artificial Intelligence</h3>
+                        <p class="text-sm text-gray-400 mt-1">Modern Tech</p>
+                    </div>
+                    <div class="glass-card p-6 rounded-xl text-center hover:-translate-y-2 transition-transform duration-300">
+                        <i class="fas fa-guitar text-3xl text-secondary mb-3"></i>
+                        <h3 class="font-semibold text-white">Creative Skills</h3>
+                        <p class="text-sm text-gray-400 mt-1">Music & Digital Media</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="journey" class="py-20 relative">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-3xl font-heading font-bold text-white mb-4">My Journey</h2>
+                <div class="w-20 h-1 bg-gradient-to-r from-primary to-secondary mx-auto rounded-full"></div>
+            </div>
+
+            <div class="relative border-l-2 border-slate-700 ml-3 md:ml-6 space-y-12">
+                
+                <div class="relative pl-8 md:pl-12" data-aos="fade-up">
+                    <div class="absolute w-6 h-6 bg-slate-900 border-2 border-primary rounded-full -left-[13px] top-1"></div>
+                    <div class="glass-card p-6 rounded-xl">
+                        <span class="text-sm text-primary font-semibold tracking-wide">COMPLETED</span>
+                        <h3 class="text-xl font-bold text-white mt-1">Academic Foundation</h3>
+                        <p class="text-gray-400 mt-2">Completed +2 / Higher Secondary education in Management with Mathematics and Computer Science scoring 3.88 GPA.</p>
+                    </div>
+                </div>
+
+                <div class="relative pl-8 md:pl-12" data-aos="fade-up" data-aos-delay="100">
+                    <div class="absolute w-6 h-6 bg-slate-900 border-2 border-secondary rounded-full -left-[13px] top-1"></div>
+                    <div class="glass-card p-6 rounded-xl">
+                        <span class="text-sm text-secondary font-semibold tracking-wide">EXPLORATION</span>
+                        <h3 class="text-xl font-bold text-white mt-1">Technology Exploration</h3>
+                        <p class="text-gray-400 mt-2">Started developing independent interests in programming, software development, data analytics, AI, and web technologies.</p>
+                    </div>
+                </div>
+
+                <div class="relative pl-8 md:pl-12" data-aos="fade-up" data-aos-delay="200">
+                    <div class="absolute w-6 h-6 bg-slate-900 border-2 border-primary rounded-full -left-[13px] top-1 shadow-[0_0_10px_rgba(59,130,246,0.3)]"></div>
+                    <div class="glass-card p-8 rounded-xl border-t-2 border-primary bg-gradient-to-br from-blue-500/5 to-transparent">
+                        <span class="text-sm text-primary font-semibold tracking-wide">★ MOST DEMANDED CERTIFICATION ★</span>
+                        <h3 class="text-2xl font-bold text-white mt-2">Google Data Analytics Professional</h3>
+                        <p class="text-gray-400 mt-3">Mastered data analytics fundamentals through 9 professional courses. Competent in Spreadsheets, SQL, Tableau, and Python for data preparation, analysis, and visualization. This certification is the foundation for pursuing advanced data roles.</p>
+                        <div class="mt-4 flex flex-wrap gap-2">
+                            <span class="px-3 py-1 bg-primary/20 text-primary text-xs font-semibold rounded-full">Data Analysis</span>
+                            <span class="px-3 py-1 bg-primary/20 text-primary text-xs font-semibold rounded-full">SQL</span>
+                            <span class="px-3 py-1 bg-primary/20 text-primary text-xs font-semibold rounded-full">Tableau</span>
+                            <span class="px-3 py-1 bg-primary/20 text-primary text-xs font-semibold rounded-full">Python</span>
+                        </div>
+                        <a href="certifications/Coursera WIK8GTVSKVTA.pdf" target="_blank" class="mt-6 inline-flex items-center gap-2 px-4 py-2 bg-primary/20 hover:bg-primary/30 text-primary hover:text-white border border-primary/50 hover:border-primary rounded-lg transition-all">
+                            <i class="fas fa-file-pdf"></i>
+                            <span class="font-semibold">View Certificate PDF</span>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="relative pl-8 md:pl-12" data-aos="fade-up" data-aos-delay="300">
+                    <div class="absolute w-6 h-6 bg-slate-900 border-2 border-secondary rounded-full -left-[13px] top-1"></div>
+                    <div class="glass-card p-6 rounded-xl">
+                        <span class="text-sm text-secondary font-semibold tracking-wide">CERTIFICATIONS</span>
+                        <h3 class="text-xl font-bold text-white mt-1">Complete Certification Portfolio</h3>
+                        <div class="mt-4 grid grid-cols-1 md:grid-cols-2 gap-4">
+                            <div class="bg-white/5 rounded-lg p-4 border border-white/10">
+                                <p class="font-semibold text-white">Google Data Analytics</p>
+                            </div>
+                            <div class="bg-white/5 rounded-lg p-4 border border-white/10">
+                                <p class="font-semibold text-white">Google Digital Marketing</p>
+                            </div>
+                            <div class="bg-white/5 rounded-lg p-4 border border-white/10">
+                                <p class="font-semibold text-white">Google AI Professional</p>
+                            </div>
+                            <div class="bg-white/5 rounded-lg p-4 border border-white/10">
+                                <p class="font-semibold text-white">Google AI Essentials</p>
+                            </div>
+                        </div>
+                        <p class="text-gray-400 mt-4 text-sm"></p>
+                    </div>
+                </div>
+
+                <div class="relative pl-8 md:pl-12" data-aos="fade-up" data-aos-delay="400">
+                    <div class="absolute w-6 h-6 bg-primary rounded-full -left-[13px] top-1 shadow-[0_0_15px_rgba(59,130,246,0.5)] animate-pulse"></div>
+                    <div class="glass-card p-6 rounded-xl border border-primary/50">
+                        <span class="text-sm text-primary font-semibold tracking-wide">CURRENT</span>
+                        <h3 class="text-xl font-bold text-white mt-1">B.Tech Ed. IT</h3>
+                        <p class="text-gray-300 mt-2">Beginning my university journey to formalize my education and continue building a multidisciplinary technology career.</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="skills" class="py-20 bg-slate-900/50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-3xl font-heading font-bold text-white mb-4">Technical & Professional Skills</h2>
+                <div class="w-20 h-1 bg-gradient-to-r from-primary to-secondary mx-auto rounded-full"></div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="glass-card p-6 rounded-xl" data-aos="zoom-in">
+                    <div class="flex items-center gap-3 mb-6">
+                        <i class="fas fa-code text-2xl text-primary"></i>
+                        <h3 class="text-xl font-bold text-white">Programming</h3>
+                    </div>
+                    <div class="space-y-3">
+                        <div class="flex justify-between items-center border-b border-white/5 pb-2">
+                            <span class="text-gray-300">Python</span> <span class="text-xs bg-primary/20 text-primary px-2 py-1 rounded">Developing</span>
+                        </div>
+                        <div class="flex justify-between items-center border-b border-white/5 pb-2">
+                            <span class="text-gray-300">HTML / CSS</span> <span class="text-xs bg-primary/20 text-primary px-2 py-1 rounded">Learning</span>
+                        </div>
+                        <div class="flex justify-between items-center border-b border-white/5 pb-2">
+                            <span class="text-gray-300">JavaScript</span> <span class="text-xs bg-primary/20 text-primary px-2 py-1 rounded">Learning</span>
+                        </div>
+                        <div class="flex justify-between items-center border-b border-white/5 pb-2">
+                            <span class="text-gray-300">SQL</span> <span class="text-xs bg-white/10 text-gray-300 px-2 py-1 rounded">Familiar</span>
+                        </div>
+                        <div class="flex justify-between items-center pb-2">
+                            <span class="text-gray-300">Git / GitHub</span> <span class="text-xs bg-primary/20 text-primary px-2 py-1 rounded">Learning</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="glass-card p-6 rounded-xl" data-aos="zoom-in" data-aos-delay="100">
+                    <div class="flex items-center gap-3 mb-6">
+                        <i class="fas fa-database text-2xl text-secondary"></i>
+                        <h3 class="text-xl font-bold text-white">Data & Analytics</h3>
+                    </div>
+                    <div class="space-y-3">
+                        <div class="flex justify-between items-center border-b border-white/5 pb-2">
+                            <span class="text-gray-300">Data Analytics</span> <span class="text-xs bg-white/10 text-gray-300 px-2 py-1 rounded">Familiar</span>
+                        </div>
+                        <div class="flex justify-between items-center border-b border-white/5 pb-2">
+                            <span class="text-gray-300">Spreadsheets</span> <span class="text-xs bg-white/10 text-gray-300 px-2 py-1 rounded">Familiar</span>
+                        </div>
+                        <div class="flex justify-between items-center border-b border-white/5 pb-2">
+                            <span class="text-gray-300">Tableau</span> <span class="text-xs bg-white/10 text-gray-300 px-2 py-1 rounded">Familiar</span>
+                        </div>
+                        <div class="flex justify-between items-center border-b border-white/5 pb-2">
+                            <span class="text-gray-300">Data Viz & Cleaning</span> <span class="text-xs bg-white/10 text-gray-300 px-2 py-1 rounded">Familiar</span>
+                        </div>
+                        <div class="flex justify-between items-center pb-2">
+                            <span class="text-gray-300">Power BI</span> <span class="text-xs bg-slate-700 text-gray-400 px-2 py-1 rounded">Planned</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="glass-card p-6 rounded-xl" data-aos="zoom-in" data-aos-delay="200">
+                    <div class="flex items-center gap-3 mb-6">
+                        <i class="fas fa-microchip text-2xl text-primary"></i>
+                        <h3 class="text-xl font-bold text-white">Artificial Intelligence</h3>
+                    </div>
+                    <div class="space-y-3">
+                        <div class="flex justify-between items-center border-b border-white/5 pb-2">
+                            <span class="text-gray-300">Generative AI</span> <span class="text-xs bg-white/10 text-gray-300 px-2 py-1 rounded">Familiar</span>
+                        </div>
+                        <div class="flex justify-between items-center border-b border-white/5 pb-2">
+                            <span class="text-gray-300">Prompt Engineering</span> <span class="text-xs bg-white/10 text-gray-300 px-2 py-1 rounded">Familiar</span>
+                        </div>
+                        <div class="flex justify-between items-center border-b border-white/5 pb-2">
+                            <span class="text-gray-300">AI Productivity</span> <span class="text-xs bg-white/10 text-gray-300 px-2 py-1 rounded">Familiar</span>
+                        </div>
+                        <div class="flex justify-between items-center border-b border-white/5 pb-2">
+                            <span class="text-gray-300">Responsible AI</span> <span class="text-xs bg-white/10 text-gray-300 px-2 py-1 rounded">Familiar</span>
+                        </div>
+                        <div class="flex justify-between items-center pb-2">
+                            <span class="text-gray-300">AI-Assisted Dev</span> <span class="text-xs bg-primary/20 text-primary px-2 py-1 rounded">Developing</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="glass-card p-6 rounded-xl" data-aos="zoom-in" data-aos-delay="300">
+                    <div class="flex items-center gap-3 mb-6">
+                        <i class="fas fa-chart-line text-2xl text-secondary"></i>
+                        <h3 class="text-xl font-bold text-white">Business & Digital</h3>
+                    </div>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1 bg-white/5 border border-white/10 rounded-full text-sm text-gray-300">Digital Marketing</span>
+                        <span class="px-3 py-1 bg-white/5 border border-white/10 rounded-full text-sm text-gray-300">Online Advertising</span>
+                        <span class="px-3 py-1 bg-white/5 border border-white/10 rounded-full text-sm text-gray-300">E-commerce</span>
+                        <span class="px-3 py-1 bg-white/5 border border-white/10 rounded-full text-sm text-gray-300">Entrepreneurship</span>
+                    </div>
+                </div>
+
+                <div class="glass-card p-6 rounded-xl" data-aos="zoom-in" data-aos-delay="400">
+                    <div class="flex items-center gap-3 mb-6">
+                        <i class="fas fa-tools text-2xl text-primary"></i>
+                        <h3 class="text-xl font-bold text-white">Tools & Software</h3>
+                    </div>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1 bg-white/5 border border-white/10 rounded-full text-sm text-gray-300">VS Code</span>
+                        <span class="px-3 py-1 bg-white/5 border border-white/10 rounded-full text-sm text-gray-300">GitHub</span>
+                        <span class="px-3 py-1 bg-white/5 border border-white/10 rounded-full text-sm text-gray-300">Canva</span>
+                        <span class="px-3 py-1 bg-white/5 border border-white/10 rounded-full text-sm text-gray-300">Google Workspace</span>
+                        <span class="px-3 py-1 bg-white/5 border border-white/10 rounded-full text-sm text-gray-300">Video Editing</span>
+                    </div>
+                </div>
+
+                <div class="glass-card p-6 rounded-xl" data-aos="zoom-in" data-aos-delay="500">
+                    <div class="flex items-center gap-3 mb-6">
+                        <i class="fas fa-users text-2xl text-secondary"></i>
+                        <h3 class="text-xl font-bold text-white">Soft Skills</h3>
+                    </div>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1 bg-white/5 border border-white/10 rounded-full text-sm text-gray-300">Professional Communication</span>
+                        <span class="px-3 py-1 bg-white/5 border border-white/10 rounded-full text-sm text-gray-300">Self-Directed Learning</span>
+                        <span class="px-3 py-1 bg-white/5 border border-white/10 rounded-full text-sm text-gray-300">Time Management</span>
+                        <span class="px-3 py-1 bg-white/5 border border-white/10 rounded-full text-sm text-gray-300">Analytical Thinking</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="certifications" class="py-20 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-3xl font-heading font-bold text-white mb-4">Professional Certifications</h2>
+                <div class="w-20 h-1 bg-gradient-to-r from-primary to-secondary mx-auto rounded-full"></div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
+                <div class="glass-card p-8 rounded-2xl relative overflow-hidden group" data-aos="fade-up">
+                    <div class="absolute top-0 right-0 w-24 h-24 bg-primary/10 rounded-bl-full z-0 group-hover:scale-110 transition-transform"></div>
+                    <div class="relative z-10">
+                        <div class="flex justify-between items-start mb-4">
+                            <h3 class="text-xl font-bold text-white">Google Digital Marketing & E-commerce</h3>
+                            <img src="certifications/google-digital-marketing-e-commerce-professional-ce.2.png" alt="Google Digital Marketing Badge" class="w-16 h-16 object-contain rounded-2xl" title="Google Digital Marketing Badge">
+                        </div>
+                        <p class="text-sm text-gray-400 mb-2">Completed: August 2026</p>
+                        <p class="text-gray-300 mb-4 text-sm leading-relaxed">
+                            Professional certification covering digital marketing fundamentals, online advertising, analytics, and e-commerce strategies to build a strong foundation in the digital business landscape.
+                        </p>
+                        <p class="text-xs text-gray-400 mb-4"><strong>Skills:</strong> Digital Marketing, Online Advertising</p>
+                        <a href="https://coursera.org/verify/professional-cert/2DAWREN064X" target="_blank" rel="noopener noreferrer" class="inline-flex items-center text-sm font-medium text-primary hover:text-white transition-colors">
+                            Verify Credential <i class="fas fa-external-link-alt ml-2 text-xs"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="glass-card p-8 rounded-2xl relative overflow-hidden group" data-aos="fade-up" data-aos-delay="100">
+                    <div class="absolute top-0 right-0 w-24 h-24 bg-secondary/10 rounded-bl-full z-0 group-hover:scale-110 transition-transform"></div>
+                    <div class="relative z-10">
+                        <div class="flex justify-between items-start mb-4">
+                            <h3 class="text-xl font-bold text-white">Google Data Analytics</h3>
+                            <img src="certifications/google-data-analytics-professional-certificate-v-3.png" alt="Google Data Analytics Badge" class="w-16 h-16 object-contain rounded-2xl" title="Google Data Analytics Badge">
+                        </div>
+                        <p class="text-sm text-gray-400 mb-2">Completed: August 2026</p>
+                        <p class="text-gray-300 mb-4 text-sm leading-relaxed">
+                            Those who earn the Google Data Analytics Professional Certificate have completed nine courses, developed by Google, designed to prepare them for introductory-level roles. They are competent in tools including spreadsheets, SQL, Tableau, and Python.
+                        </p>
+                        <p class="text-xs text-gray-400 mb-4"><strong>Skills:</strong> Data Analysis, SQL, Tableau, Python</p>
+                        <a href="https://coursera.org/verify/professional-cert/WIK8GTVSKVTA" target="_blank" rel="noopener noreferrer" class="inline-flex items-center text-sm font-medium text-primary hover:text-white transition-colors">
+                            Verify Credential <i class="fas fa-external-link-alt ml-2 text-xs"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="glass-card p-8 rounded-2xl relative overflow-hidden group" data-aos="fade-up">
+                    <div class="absolute top-0 right-0 w-24 h-24 bg-primary/10 rounded-bl-full z-0 group-hover:scale-110 transition-transform"></div>
+                    <div class="relative z-10">
+                        <div class="flex justify-between items-start mb-4">
+                            <h3 class="text-xl font-bold text-white">Google AI Professional</h3>
+                            <i class="fab fa-google text-2xl text-gray-400"></i>
+                        </div>
+                        <p class="text-sm text-gray-400 mb-2">Completed: August 2026</p>
+                        <p class="text-gray-300 mb-4 text-sm leading-relaxed">
+                            Those who earn the Google AI Professional Certificate are fluent in AI, completing courses demonstrating ability to apply AI to Brainstorming, Research, Communication, Content Creation, Data Analysis, and coding. They prompt effectively and leverage AI tools responsibly.
+                        </p>
+                        <p class="text-xs text-gray-400 mb-4"><strong>Skills:</strong> Prompt Engineering, AI Tools, Content Creation</p>
+                        <a href="https://coursera.org/verify/professional-cert/6Q1YX3UYS8U8" target="_blank" rel="noopener noreferrer" class="inline-flex items-center text-sm font-medium text-primary hover:text-white transition-colors">
+                            Verify Credential <i class="fas fa-external-link-alt ml-2 text-xs"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="glass-card p-8 rounded-2xl relative overflow-hidden group" data-aos="fade-up" data-aos-delay="100">
+                    <div class="absolute top-0 right-0 w-24 h-24 bg-secondary/10 rounded-bl-full z-0 group-hover:scale-110 transition-transform"></div>
+                    <div class="relative z-10">
+                        <div class="flex justify-between items-start mb-4">
+                            <h3 class="text-xl font-bold text-white">Google AI Essentials</h3>
+                            <i class="fab fa-google text-2xl text-gray-400"></i>
+                        </div>
+                        <p class="text-sm text-gray-400 mb-2">Completed: August 2026</p>
+                        <p class="text-gray-300 mb-4 text-sm leading-relaxed">
+                            Earners have completed five courses developed by Google featuring hands-on practice designed to build AI skills. They are competent in using AI tools responsibly and improving productivity across workflows.
+                        </p>
+                        <p class="text-xs text-gray-400 mb-4"><strong>Skills:</strong> Prompt Engineering, AI Tools, Content Creation</p>
+                        <a href="https://coursera.org/verify/specialization/97RWA4U09TF9" target="_blank" rel="noopener noreferrer" class="inline-flex items-center text-sm font-medium text-primary hover:text-white transition-colors">
+                            Verify Credential <i class="fas fa-external-link-alt ml-2 text-xs"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <h3 class="text-2xl font-bold text-center text-white mb-8" data-aos="fade-up">Google AI Learning Badges</h3>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4" data-aos="fade-up">
+                <div class="glass-card p-4 text-center rounded-lg border-t-2 border-primary hover:bg-white/5 transition-colors">
+                    <p class="text-sm font-medium text-gray-200">AI Fundamentals</p>
+                </div>
+                <div class="glass-card p-4 text-center rounded-lg border-t-2 border-secondary hover:bg-white/5 transition-colors">
+                    <p class="text-sm font-medium text-gray-200">Brainstorming & Planning</p>
+                </div>
+                <div class="glass-card p-4 text-center rounded-lg border-t-2 border-primary hover:bg-white/5 transition-colors">
+                    <p class="text-sm font-medium text-gray-200">Research & Insights</p>
+                </div>
+                <div class="glass-card p-4 text-center rounded-lg border-t-2 border-secondary hover:bg-white/5 transition-colors">
+                    <p class="text-sm font-medium text-gray-200">Writing & Communicating</p>
+                </div>
+                <div class="glass-card p-4 text-center rounded-lg border-t-2 border-secondary hover:bg-white/5 transition-colors">
+                    <p class="text-sm font-medium text-gray-200">Content Creation</p>
+                </div>
+                <div class="glass-card p-4 text-center rounded-lg border-t-2 border-primary hover:bg-white/5 transition-colors">
+                    <p class="text-sm font-medium text-gray-200">Data Analysis</p>
+                </div>
+                <div class="glass-card p-4 text-center rounded-lg border-t-2 border-secondary hover:bg-white/5 transition-colors">
+                    <p class="text-sm font-medium text-gray-200">App Building</p>
+                </div>
+                <div class="glass-card p-4 text-center rounded-lg border-t-2 border-primary hover:bg-white/5 transition-colors">
+                    <p class="text-sm font-medium text-gray-200">App Deployment</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-20 bg-slate-900/50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="glass-card rounded-3xl p-8 md:p-12 flex flex-col md:flex-row items-center gap-12" data-aos="fade-up">
+                <div class="flex-1">
+                    <h2 class="text-3xl font-heading font-bold text-white mb-4">Beyond Technology <span class="text-secondary">— Music</span></h2>
+                    <p class="text-gray-300 mb-6 leading-relaxed">
+                        I believe creativity fuels problem-solving. Outside of code and data, I have been playing the electric guitar for over 3 years. I'm comfortable with barre chords, familiar with the C major scale, and actively working on improving my music theory, improvisation, and technical playing. 
+                    </p>
+                    <div class="flex flex-wrap gap-3">
+                        <span class="px-3 py-1 bg-secondary/20 text-secondary border border-secondary/30 rounded-full text-sm">Electric Guitar</span>
+                        <span class="px-3 py-1 bg-secondary/20 text-secondary border border-secondary/30 rounded-full text-sm">NUX MG-400</span>
+                        <span class="px-3 py-1 bg-secondary/20 text-secondary border border-secondary/30 rounded-full text-sm">Music Theory Learner</span>
+                    </div>
+                </div>
+                <div class="flex-1 flex justify-center">
+                    <img src="strat.png" alt="Electric Guitar" class="w-64 h-64 md:w-80 md:h-80 object-cover rounded-2xl shadow-2xl">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-20">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-3xl font-heading font-bold text-white mb-12" data-aos="fade-up">What I'm Learning Next</h2>
+            <div class="flex flex-wrap justify-center items-center gap-4 text-gray-400 font-medium" data-aos="fade-up">
+                <span class="px-4 py-2 glass-card rounded-lg border-primary/50 text-white">Python</span>
+                <i class="fas fa-arrow-right text-sm"></i>
+                <span class="px-4 py-2 glass-card rounded-lg text-white">Git & GitHub</span>
+                <i class="fas fa-arrow-right text-sm"></i>
+                <span class="px-4 py-2 glass-card rounded-lg text-white">SQL & Databases</span>
+                <i class="fas fa-arrow-right text-sm"></i>
+                <span class="px-4 py-2 glass-card rounded-lg">Advanced Analytics</span>
+                <i class="fas fa-arrow-right text-sm opacity-50"></i>
+                <span class="px-4 py-2 glass-card rounded-lg opacity-70">Power BI</span>
+                <i class="fas fa-arrow-right text-sm opacity-50"></i>
+                <span class="px-4 py-2 glass-card rounded-lg opacity-70">Web & Backend Dev</span>
+                <i class="fas fa-arrow-right text-sm opacity-50"></i>
+                <span class="px-4 py-2 glass-card rounded-lg opacity-50 border-dashed">Machine Learning</span>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="py-20 bg-slate-900/50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-3xl font-heading font-bold text-white mb-4">Projects & Experiments</h2>
+                <div class="w-20 h-1 bg-gradient-to-r from-primary to-secondary mx-auto rounded-full"></div>
+                <p class="mt-6 text-gray-400 max-w-2xl mx-auto">I'm currently building my technical foundation and will progressively publish projects as I develop my skills.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="glass-card rounded-xl overflow-hidden border border-dashed border-gray-600 opacity-70" data-aos="fade-up">
+                    <div class="h-48 bg-slate-800 flex items-center justify-center">
+                        <i class="fas fa-laptop-code text-4xl text-gray-600"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-300 mb-2">Project Coming Soon</h3>
+                        <p class="text-sm text-gray-500 mb-4">Developing technical projects to apply my programming, data analytics, and AI skills in practical situations.</p>
+                        <div class="flex gap-2">
+                            <span class="px-2 py-1 bg-slate-800 rounded text-xs text-gray-500">Python / Tech</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="resume" class="py-20 relative">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-end mb-10 no-print" data-aos="fade-up">
+                <div>
+                    <h2 class="text-3xl font-heading font-bold text-white mb-2">Professional Resume</h2>
+                    <p class="text-gray-400"></p>
+                </div>
+                <button onclick="window.print()" class="px-5 py-2 bg-white text-dark font-semibold rounded-lg shadow hover:bg-gray-200 transition-colors flex items-center gap-2">
+                    <i class="fas fa-download"></i> Download PDF
+                </button>
+            </div>
+
+            <div id="resume-section" class="bg-white text-slate-900 rounded-xl shadow-2xl p-8 md:p-12 print:shadow-none print:p-0" data-aos="fade-up">
+                
+                <div class="border-b-2 print-border-gray border-slate-200 pb-6 mb-6">
+                    <h1 class="text-3xl md:text-4xl font-bold uppercase tracking-wide text-slate-900 print-text-black">Dipesh Prasad Shrestha</h1>
+                    <h2 class="text-lg text-primary font-semibold mt-1">B.Tech Ed. IT Student | Aspiring Software Developer | Data & AI Enthusiast</h2>
+                    
+                    <div class="flex flex-wrap gap-x-6 gap-y-2 mt-4 text-sm text-slate-600 print-text-black">
+                        <span class="flex items-center gap-2"><i class="fas fa-map-marker-alt"></i> Butwal, Lumbini Province, Nepal</span>
+                        <span class="flex items-center gap-2"><i class="fas fa-envelope"></i>dipeshprasadshrestha@gmail.com</span>
+                        <span class="flex items-center gap-2"><i class="fas fa-phone"></i>+977 9747409805</span>
+                        <span class="flex items-center gap-2"><i class="fab fa-linkedin"></i><a href="https://www.linkedin.com/in/dipeshprasadshrestha" alt="Linkedin">Dipesh Shrestha</a></span>
+                    </div>
+                </div>
+
+                <div class="mb-6">
+                    <h3 class="text-lg font-bold text-slate-800 uppercase border-b print-border-gray border-slate-200 pb-1 mb-3 print-text-black">Professional Summary</h3>
+                    <p class="text-sm text-slate-700 leading-relaxed print-text-black">
+                        An aspiring IT professional with an academic background in Management with Mathematics and Computer Science and a growing focus on software development, data analytics, artificial intelligence, and web technologies. Experienced in structured self-directed learning through professional programs in data analytics, AI, and digital marketing. Currently developing programming, analytical, communication, and digital technology skills while preparing for a B.Tech Ed. IT journey.
+                    </p>
+                </div>
+
+                <div class="mb-6">
+                    <h3 class="text-lg font-bold text-slate-800 uppercase border-b print-border-gray border-slate-200 pb-1 mb-3 print-text-black">Education</h3>
+                    
+                    <div class="mb-4">
+                        <div class="flex justify-between items-start">
+                            <h4 class="font-bold text-slate-900 print-text-black">Bachelor of Technology Education — Information Technology (B.Tech Ed. IT)</h4>
+                            <span class="text-sm font-semibold text-slate-600 print-text-black">Incoming Student</span>
+                        </div>
+                        <p class="text-sm text-slate-600 print-text-black">Building a multidisciplinary technology foundation.</p>
+                    </div>
+
+                    <div>
+                        <div class="flex justify-between items-start">
+                            <h4 class="font-bold text-slate-900 print-text-black">Higher Secondary Education (+2)</h4>
+                            <span class="text-sm font-semibold text-slate-600 print-text-black">Completed: 2026</span>
+                        </div>
+                        <p class="text-sm text-slate-600 font-medium print-text-black">Management with Mathematics & Computer Science | GPA: 3.88</p>
+                        <p class="text-sm text-slate-600 mt-1 print-text-black">Relevant Subjects: Mathematics, Computer Science, Accountancy, Economics.</p>
+                    </div>
+                </div>
+
+                <div class="mb-6">
+                    <h3 class="text-lg font-bold text-slate-800 uppercase border-b print-border-gray border-slate-200 pb-1 mb-3 print-text-black">Professional Certifications</h3>
+                    <ul class="text-sm text-slate-700 space-y-3 print-text-black">
+                        <li>
+                            <strong class="text-slate-900">Google Data Analytics Professional Certificate</strong> — Google (Aug 2026)<br>
+                            <span class="text-slate-600">Areas: Spreadsheets, SQL, Tableau, Python, Data preparation, analysis, and visualization.</span>
+                        </li>
+                        <li>
+                            <strong class="text-slate-900">Google AI Professional Certificate</strong> — Google (Aug 2026)<br>
+                            <span class="text-slate-600">Areas: AI fundamentals, research, communication, content creation, data analysis, app building/deployment.</span>
+                        </li>
+                        <li>
+                            <strong class="text-slate-900">Google AI Essentials</strong> — Google (Aug 2026)<br>
+                            <span class="text-slate-600">Areas: AI productivity tools, prompt engineering, responsible AI.</span>
+                        </li>
+                        <li>
+                            <strong class="text-slate-900">Google Digital Marketing & E-commerce</strong> — Google (Aug 2026)<br>
+                            <span class="text-slate-600">Areas: Digital Marketing, Online Advertising, E-commerce fundamentals.</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="mb-6 grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div>
+                        <h3 class="text-lg font-bold text-slate-800 uppercase border-b print-border-gray border-slate-200 pb-1 mb-3 print-text-black">Technical Skills</h3>
+                        <ul class="text-sm text-slate-700 space-y-1 list-disc list-inside print-text-black">
+                            <li><strong>Programming:</strong> Python (Developing), HTML/CSS/JS (Learning), SQL (Foundational).</li>
+                            <li><strong>Data & Analytics:</strong> Spreadsheets, Data Cleaning/Viz, Tableau.</li>
+                            <li><strong>Artificial Intelligence:</strong> Prompt Engineering, Gen AI, AI-assisted workflows.</li>
+                            <li><strong>Digital Tools:</strong> Canva, VS Code, Git/GitHub (Learning).</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3 class="text-lg font-bold text-slate-800 uppercase border-b print-border-gray border-slate-200 pb-1 mb-3 print-text-black">Soft Skills & Languages</h3>
+                        <ul class="text-sm text-slate-700 space-y-1 list-disc list-inside print-text-black">
+                            <li><strong>Professional:</strong> Written Communication, Self-directed Learning, Analytical Thinking, Time Management.</li>
+                            <li><strong>Business:</strong> Marketing Awareness, Entrepreneurial mindset.</li>
+                            <li><strong>Languages:</strong> Nepali (Native/Fluent), English (Professional Working).</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div>
+                    <h3 class="text-lg font-bold text-slate-800 uppercase border-b print-border-gray border-slate-200 pb-1 mb-3 print-text-black">Experience & Practical Development</h3>
+                    <div class="mb-3">
+                        <div class="flex justify-between items-start">
+                            <h4 class="font-bold text-slate-900 print-text-black">Self-Directed Technology Development</h4>
+                            <span class="text-sm font-semibold text-slate-600 print-text-black">2026 – Present</span>
+                        </div>
+                        <ul class="text-sm text-slate-700 list-disc list-inside mt-1 print-text-black">
+                            <li>Developing foundational programming skills focusing on Python and Web Technologies.</li>
+                            <li>Completed intensive Google professional learning programs covering Data Analytics and AI.</li>
+                            <li>Building a long-term technical skill foundation tailored for B.Tech Ed. IT coursework.</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <div class="flex justify-between items-start">
+                            <h4 class="font-bold text-slate-900 print-text-black">Digital & Creative Experience</h4>
+                        </div>
+                        <ul class="text-sm text-slate-700 list-disc list-inside mt-1 print-text-black">
+                            <li>Creating and editing digital content, utilizing Canva and video editing workflows.</li>
+                            <li>Continuing 3+ years of dedicated self-taught practice on the electric guitar.</li>
+                        </ul>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+
+    </main>
+
+    <section id="contact" class="py-20 bg-slate-900/50 no-print">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12" data-aos="fade-up">
+                <h2 class="text-3xl font-heading font-bold text-white mb-4">Let's Connect</h2>
+                <div class="w-20 h-1 bg-gradient-to-r from-primary to-secondary mx-auto rounded-full mb-6"></div>
+                <p class="text-gray-300 text-lg">Have an idea, opportunity, collaboration, or project? Let's connect and build something meaningful.</p>
+            </div>
+
+            <div class="glass-card p-8 rounded-2xl" data-aos="fade-up">
+                <form id="contact-form" class="space-y-6" onsubmit="event.preventDefault(); alert('Form submission simulated. Please integrate a backend service like Formspree or EmailJS later.');">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div>
+                            <label class="block text-sm font-medium text-gray-400 mb-2">Name</label>
+                            <input type="text" required class="w-full bg-slate-800/50 border border-slate-600 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-primary transition-colors placeholder-gray-500" placeholder="Your Name">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-gray-400 mb-2">Email</label>
+                            <input type="email" required class="w-full bg-slate-800/50 border border-slate-600 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-primary transition-colors placeholder-gray-500" placeholder="your@email.com">
+                        </div>
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-gray-400 mb-2">Subject</label>
+                        <input type="text" required class="w-full bg-slate-800/50 border border-slate-600 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-primary transition-colors placeholder-gray-500" placeholder="How can we collaborate?">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-gray-400 mb-2">Message</label>
+                        <textarea required rows="4" class="w-full bg-slate-800/50 border border-slate-600 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-primary transition-colors placeholder-gray-500 resize-none" placeholder="Your message here..."></textarea>
+                    </div>
+                    <button type="submit" class="w-full py-3 px-6 rounded-lg bg-gradient-to-r from-primary to-secondary text-white font-medium hover:shadow-lg hover:shadow-primary/30 transition-all">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-slate-950 py-12 border-t border-white/5 no-print">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h3 class="text-2xl font-heading font-bold tracking-wider text-white mb-2">Dipesh Prasad Shrestha<span class="text-primary">.</span></h3>
+            <p class="text-gray-400 mb-6">Building at the intersection of technology, data, AI, and creativity.</p>
+            
+            <div class="flex justify-center gap-6 mb-8">
+                <a href="https://www.linkedin.com/in/dipeshprasadshrestha" target="_blank" rel="noopener noreferrer" class="text-gray-500 hover:text-white transition-colors text-xl"><i class="fab fa-linkedin"></i></a>
+                <a href="https://github.com/dipeshpshrestha" target="_blank" rel="noopener noreferrer" class="text-gray-500 hover:text-white transition-colors text-xl"><i class="fab fa-github"></i></a>
+                <a href="https://instagram.com/dipeshpshrestha" target="_blank" rel="noopener noreferrer" class="text-gray-500 hover:text-white transition-colors text-xl"><i class="fab fa-instagram"></i></a>
+                <a href="mailto:dipeshprasadshrestha@gmail.com" class="text-gray-500 hover:text-white transition-colors text-xl"><i class="fas fa-envelope"></i></a>
+            </div>
+            
+            <p class="text-sm text-gray-600">&copy; 2026 Dipesh Prasad Shrestha. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        // Initialize Animations
+        AOS.init({
+            duration: 800,
+            once: true,
+            offset: 50
+        });
+
+        // Mobile Menu Toggle with ARIA support and close-on-link
+        const btn = document.getElementById('mobile-menu-btn');
+        const menu = document.getElementById('mobile-menu');
+
+        function setMenu(open) {
+            if (open) {
+                menu.classList.remove('hidden');
+                btn.setAttribute('aria-expanded', 'true');
+                menu.setAttribute('aria-hidden', 'false');
+            } else {
+                menu.classList.add('hidden');
+                btn.setAttribute('aria-expanded', 'false');
+                menu.setAttribute('aria-hidden', 'true');
+            }
+        }
+
+        btn.addEventListener('click', () => {
+            setMenu(menu.classList.contains('hidden'));
+        });
+
+        // Close menu when any link inside is clicked (mobile)
+        menu.querySelectorAll('a').forEach(a => {
+            a.addEventListener('click', () => setMenu(false));
+        });
+
+        // Close on Escape key
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') setMenu(false);
+        });
+
+        // Navbar blur effect on scroll
+        window.addEventListener('scroll', () => {
+            const nav = document.getElementById('navbar');
+            if (window.scrollY > 10) {
+                nav.classList.add('shadow-lg', 'bg-slate-900/80');
+                nav.classList.remove('bg-transparent');
+            } else {
+                nav.classList.remove('shadow-lg', 'bg-slate-900/80');
+                nav.classList.add('bg-transparent');
+            }
+        });
+    </script>
+</body>
+</html>
